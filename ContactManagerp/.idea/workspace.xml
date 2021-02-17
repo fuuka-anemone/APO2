@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34526b01-8f12-41f4-8e75-6bc1ce07b2ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ui/ContactManagerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ContactManagerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Contact.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
