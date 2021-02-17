@@ -11,9 +11,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
 import model.Contact;
 import model.ContactManager;
 
+import java.io.File;
 import java.io.IOException;
 
 public class ContactManagerGUI {
@@ -41,8 +43,14 @@ public class ContactManagerGUI {
 
     private ContactManager contactM;
 
+    private final FileChooser fileChooser;
+
+    private final Alert alert;
+
     public ContactManagerGUI() {
+        fileChooser = new FileChooser();
         contactM = new ContactManager();
+        alert = new Alert(null);
     }
 
     @FXML
@@ -87,5 +95,42 @@ public class ContactManagerGUI {
         } catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+
+    @FXML
+    public void exportContacts(ActionEvent event) throws IOException {
+        File file = fileChooser.showOpenDialog(mainPane.getScene().getWindow());
+        fileChooser.setTitle("Export to: ");
+        try {
+            if (file != null) {
+                contactM.exportContacts(file.getAbsolutePath());
+                showAlert(Alert.AlertType.INFORMATION,"Contacts exported successfully", null);
+            }
+        } catch (IOException io){
+            showAlert(Alert.AlertType.ERROR,"There was an error while trying to export the contacts", null);
+        }
+    }
+
+    @FXML
+    public void importContacts(ActionEvent event) throws IOException{
+        File file = fileChooser.showOpenDialog(mainPane.getScene().getWindow());
+        fileChooser.setTitle("Import from: ");
+        try {
+            if (file != null) {
+                contactM.importContacts(file.getAbsolutePath());
+                showAlert(Alert.AlertType.INFORMATION,"Contacts imported successfully", null);
+                setListWindow(null);
+            }
+        } catch (IOException io){
+            showAlert(Alert.AlertType.ERROR,"There was an error while trying to import the contacts", null);
+        }
+    }
+
+    public void showAlert(Alert.AlertType type, String content, String header){
+        alert.setAlertType(type);
+        alert.setContentText(content);
+        alert.setHeaderText(header);
+        alert.showAndWait();
     }
 }

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="34526b01-8f12-41f4-8e75-6bc1ce07b2ed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ContactManager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ContactManager/model/ContactManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContactManager/model/ContactManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ContactManager/ui/ContactManagerGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContactManager/ui/ContactManagerGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ContactManager/ui/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContactManager/ui/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ContactManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ContactManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/ContactManagerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ContactManagerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/LoginAndUserAccounts.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/src/model/Classroom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/src/model/UserAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/src/ui/ClassroomGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/src/ui/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/src/ui/account-list.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/src/ui/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/src/ui/main-pane.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginAndUserAccounts/src/ui/register.fxml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1oWKHJcxTmvzUBR7NdZbBg4dhzy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="gradle.compiler" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.Main" />
+      <module name="ContactManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="34526b01-8f12-41f4-8e75-6bc1ce07b2ed" name="Default Changelist" comment="" />
+      <created>1613396818461</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613396818461</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <option name="startingDirectory" value="C:\Users\Usuario\Documents\APO2" />
+  </component>
+</project>
