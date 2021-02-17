@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import model.Contact;
 import model.ContactManager;
 
@@ -84,11 +85,11 @@ public class ContactManagerGUI {
 
     private void setTableView() {
         try {
-            //System.out.println("the items in the ContactManagerArraylist are: " + contactM.getContacts());
+            Stage s = (Stage)(mainPane.getScene().getWindow());
+            contactsTV.prefWidthProperty().bind(s.widthProperty());
+            contactsTV.prefHeightProperty().bind(s.heightProperty());
             ObservableList<Contact> data = FXCollections.observableArrayList(contactM.getContacts());
-            //System.out.println("the items in the OBSERVABLELIST are: " + data);
             contactsTV.setItems(data);
-            //System.out.println("the items in the tableview are: " + contactsTV.getItems());
             numCol.setCellValueFactory(new PropertyValueFactory<>("num"));
             nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
             emailCol.setCellValueFactory(new PropertyValueFactory<>("email"));
