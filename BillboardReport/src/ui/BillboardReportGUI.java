@@ -89,7 +89,7 @@ public class BillboardReportGUI {
     }
 
     @FXML
-    public void exportMenu(ActionEvent event) throws IOException {
+    public void exportMenu(ActionEvent event)  {
         File file = fileChooser.showSaveDialog(mainBorderPane.getScene().getWindow());
         fileChooser.setTitle("Select the directory or file where the data will be saved");
         if (file != null) {
@@ -103,7 +103,7 @@ public class BillboardReportGUI {
     }
 
     @FXML
-    public void importMenu(ActionEvent event) throws IOException {
+    public void importMenu(ActionEvent event) {
         File file = fileChooser.showOpenDialog(mainBorderPane.getScene().getWindow());
         fileChooser.setTitle("Select the file that you want to import");
         if (file != null) {
