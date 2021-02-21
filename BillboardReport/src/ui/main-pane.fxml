@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane fx:id="mainBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#addBillboard" text="Add Billboard" />
+                  <MenuItem mnemonicParsing="false" onAction="#listBillboards" text="List Billboards" />
+                  <MenuItem mnemonicParsing="false" onAction="#importMenu" text="Import " />
+                  <MenuItem mnemonicParsing="false" onAction="#exportMenu" text="Export" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <ImageView fx:id="mainBorderPaneIV" fitHeight="374.0" fitWidth="741.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="40.0" top="70.0" />
+         </BorderPane.margin>
+      </ImageView>
+   </center>
+   <bottom>
+      <Label text="github.com/fuuka-anemone" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="50.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="Consolas Italic" size="15.0" />
+         </font>
+      </Label>
+   </bottom>
+</BorderPane>
