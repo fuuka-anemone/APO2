@@ -109,9 +109,9 @@ public class BillboardReportGUI {
         if (file != null) {
             try {
                 ifd.importData(file.toString());
+                showAlert("Success", Alert.AlertType.INFORMATION, "The data has been imported successfully");
                 if (mainBorderPane.getCenter().getClass().equals(javafx.scene.layout.HBox.class)) {
                     setTableView();
-                    showAlert("Success", Alert.AlertType.INFORMATION, "The data has been imported successfully");
                 }
             } catch (IOException io){
                 showAlert("Data Error", Alert.AlertType.ERROR, "There was an unexpected error trying to import the data from the specified file");
