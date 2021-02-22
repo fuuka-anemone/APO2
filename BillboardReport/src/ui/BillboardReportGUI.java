@@ -78,6 +78,7 @@ public class BillboardReportGUI {
         mainBorderPaneIV.setImage(new Image("file:resources/intro.png"));
     }
     //add item on main-pane menu
+        
     @FXML
     public void addBillboard(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("add-billboard.fxml"));
