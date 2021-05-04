@@ -36,6 +36,10 @@ public class Main {
         }
     }
 
+    public static void insertionSort(){
+        
+    }
+
     public static void main(String[] args){
         array = new int[]{7,3,9,2,5,1,6,4,8};
         selectionSort();
