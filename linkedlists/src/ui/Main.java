@@ -19,8 +19,10 @@ public class Main {
         System.out.println("4. to search an element by attribute");
         System.out.println("5. to delete an element by attribute");
         System.out.println("6. to print the list.");
-        System.out.println("0. to exit\n");
+        System.out.println("7. to print the list size.");
+        System.out.println("0. to exit");
         int option = sc.nextInt();
+        System.out.println();
         menu(option,l,sc);
     }
 
@@ -42,8 +44,19 @@ public class Main {
                         System.out.println("error, index out of bounds");
                     }
                     menu(sc,l);
+                case 4:
+                    System.out.print("id: ");
+                    l.printNode(l.searchNode(sc.nextLong()));
+                    menu(sc,l);
+                case 5:
+                    System.out.print("id: ");
+                    l.printNode(l.removeNode(sc.nextLong()));
+                    menu(sc,l);
                 case 6:
                     l.printList();
+                    menu(sc,l);
+                case 7:
+                    System.out.println("Linked list size: "+l.getSize());
                     menu(sc,l);
                 case 0:
                     System.exit(0);
