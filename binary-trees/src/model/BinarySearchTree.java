@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class BinarySearchTree {
 
     private Node root;
@@ -22,37 +24,38 @@ public class BinarySearchTree {
             if (current.getLeft() != null) {
                 addNode(current.getLeft(), newNode);
             } else {
-                current.setLeft(newNode);
                 newNode.setParent(current);
+                current.setLeft(newNode);
+                System.out.println("Node: " + newNode.getId() + " added with parent: " + newNode.getParent().getId());
             }
         } else {
             if (current.getRight() != null){
                 addNode(current.getRight(), newNode);
             } else {
-                current.setRight(newNode);
                 newNode.setParent(current);
+                current.setRight(newNode);
+                System.out.println("Node: " + newNode.getId() + " added with parent: " + newNode.getParent().getId());
             }
         }
     }
 
-    public Node searchCar(int id){
-        return searchCar(root, id);
+    public Node searchNode(int id){
+        return searchNode(root, id);
     }
 
     //overload
-    private Node searchCar(Node current, int id){
+    private Node searchNode(Node current, int id){
         if (current == null || current.getId() == id){
             return current;
         } else if (id < current.getId()){
-            searchCar(current.getLeft(),id);
+            return searchNode(current.getLeft(),id);
         } else {
-            searchCar(current.getRight(), id);
+            return searchNode(current.getRight(), id);
         }
-        return null;
     }
 
     public void removeNode(int id){
-        Node toRemove = searchCar(id);
+        Node toRemove = searchNode(id);
         removeNode(toRemove);
     }
 
@@ -67,7 +70,7 @@ public class BinarySearchTree {
                     toRemove.getParent().setRight(null);
                 }
                 toRemove.setParent(null);
-            } else if (toRemove.getLeft() == null || toRemove.getRight() == null){ //case 2, removing a node with 1 son.
+            } else if (toRemove.getLeft() == null ^ toRemove.getRight() == null){ //case 2, removing a node with 1 son.
                 Node son;
                 if (toRemove.getLeft() != null){
                     son = toRemove.getLeft();
@@ -85,11 +88,11 @@ public class BinarySearchTree {
                     toRemove.getParent().setRight(son);
                 }
                 toRemove.setParent(null);
+            } else { //case 3, removing a node with both sons, we search for the successor (the most left node of the right subtree of the node that we want to remove.
+                Node successor = findSuccessor(toRemove.getRight());
+                toRemove.setId(successor.getId());
+                removeNode(successor);
             }
-        } else { //case 3, removing a node with both sons, we search for the successor (the most left node of the right subtree of the node that we want to remove.
-            Node successor = findSuccessor(toRemove.getRight());
-            toRemove.setId(successor.getId());
-            removeNode(successor);
         }
     }
 
@@ -100,4 +103,30 @@ public class BinarySearchTree {
             return findSuccessor(current.getLeft());
         }
     }
+
+    public void printNode(Node toPrint){
+        if (toPrint != null){
+            System.out.println(toPrint.getId());
+        } else {
+            System.out.println("Node not found");
+        }
+    }
+
+    private void inOrder(Node node) {  //code by Javin Paul from educative.io
+        if (node == null) {
+            return;
+        }
+        inOrder(node.getLeft());
+        System.out.print(node.getId()+" ");
+        inOrder(node.getRight());
+    }
+
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    public void root(){
+        System.out.println(root.getId());
+    }
+
 }
