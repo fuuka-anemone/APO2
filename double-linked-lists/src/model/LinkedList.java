@@ -29,6 +29,52 @@ public class LinkedList {
         }
     }
 
+
+    public SimpleLinkedNode searchSimpleLN(int i){
+        return searchSimpleLN(i, firstSimpleLN);
+    }
+
+    private SimpleLinkedNode searchSimpleLN(int i, SimpleLinkedNode current){
+        if (current == null || current.getId() == i){ //if found then return it.
+            return current;
+        } else if (current.getNext() != null){ //if not found but the next ain't null, then get the next.
+            return searchSimpleLN(i, current.getNext());
+        } else {
+            return null; //not found.
+        }
+    }
+
+    private SimpleLinkedNode removeSimpleLN(SimpleLinkedNode current, SimpleLinkedNode toRemove){
+         if (current.getNext() == null) {
+             return null;
+         } else {
+             if (current.getNext() == toRemove){
+                 current.setNext(toRemove.getNext());
+                 toRemove.setNext(null);
+                 return toRemove;
+             } else {
+                 return removeSimpleLN(current.getNext(),toRemove);
+             }
+         }
+    }
+
+    public SimpleLinkedNode removeSimpleLinkedNode(int i){
+        SimpleLinkedNode toRemove = searchSimpleLN(i);
+        if (firstSimpleLN == null || toRemove == null){
+            return null;
+        } else if (firstSimpleLN == toRemove){
+            if (firstSimpleLN.getNext() == null){
+                firstSimpleLN = null;
+            } else {
+                firstSimpleLN = toRemove.getNext();
+            }
+            //toRemove.setNext(null); i don't know if i should set the pointer null.
+            return toRemove;
+        } else {
+            return removeSimpleLN(firstSimpleLN, toRemove);
+        }
+    }
+
     public void addCircularDoubleLN(int i){
         CircularDoubleLinkedNode toAdd = new CircularDoubleLinkedNode(i);
         if (firstCircularDoubleLN == null){
@@ -48,21 +94,70 @@ public class LinkedList {
     }
 
     private CircularDoubleLinkedNode searchCircularDoubleLN(int i, CircularDoubleLinkedNode current){
-        if (current == null || current.getId() == i){
+        if (current == null || current.getId() == i){ //we use the null verification in case of the list being empty (then the first is null)
             return current;
         } else if (current.getNext() != firstCircularDoubleLN){
             return searchCircularDoubleLN(i, current.getNext());
         } else {
-            return null;
+            return null; //we return null if the method couldn't find the node.
         }
     }
 
     public CircularDoubleLinkedNode removeCircularDoubleLN(int i){
-        if (firstCircularDoubleLN == null){
+        CircularDoubleLinkedNode toRemove = searchCircularDoubleLN(i);
+        if (toRemove == null){
             return null;
-        } else if (firstCircularDoubleLN.getNext() == firstCircularDoubleLN)
+        } else if (toRemove == firstCircularDoubleLN && toRemove.getNext() == firstCircularDoubleLN){
+            firstCircularDoubleLN = null;
+        } else {
+            toRemove.getPrevious().setNext(toRemove.getNext());
+            toRemove.getNext().setPrevious(toRemove.getPrevious());
+            if (toRemove == firstCircularDoubleLN) {
+                firstCircularDoubleLN = toRemove.getNext();
+            }
+        }
+        return toRemove;
     }
 
+    public void printSimpleLN(){
+        if (firstSimpleLN == null){
+            System.out.println("The simple linked list is empty.");
+        } else {
+            printSimpleLN(firstSimpleLN);
+        }
+    }
 
+    private void printSimpleLN(SimpleLinkedNode current){
+        if (current != null){
+            System.out.print(current.getId()+" ");
+            printSimpleLN(current.getNext());
+        }
+    }
 
+    public void printCircularDoubleLN(){
+        if (firstCircularDoubleLN == null){
+            System.out.println("The circular double linked list is empty.");
+        } else {
+            printCircularDoubleLN(firstCircularDoubleLN);
+        }
+    }
+
+    private void printCircularDoubleLN(CircularDoubleLinkedNode current){
+        System.out.print(current.getId()+" ");
+        if (current.getNext() != firstCircularDoubleLN){
+            printCircularDoubleLN(current.getNext());
+        }
+    }
+
+    public void nonRecursivePrint(){
+        if (firstCircularDoubleLN == null){
+            System.out.println("The circular double linked list is empty.");
+        } else {
+            CircularDoubleLinkedNode current = firstCircularDoubleLN;
+            do{
+                System.out.print(current.getId()+" ");
+                current = current.getNext();
+            } while (current != firstCircularDoubleLN);
+        }
+    }
 }
