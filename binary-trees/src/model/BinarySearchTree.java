@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Objects;
-
 public class BinarySearchTree {
 
     private Node root;
